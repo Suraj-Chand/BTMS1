@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:BTMS1"
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="BTMS1.MainWindow"
         mc:Ignorable="d"
-        Title="Bus Ticket Management System" Height="474.8" Width="800" WindowStartupLocation="CenterScreen" VerticalAlignment="Center" UseLayoutRounding="True" TextOptions.TextHintingMode="Animated" WindowStyle="ThreeDBorderWindow" BorderThickness="2" FontFamily="Times New Roman" FontWeight="Light" Icon="bus.png">
+        Title="Bus Ticket Management System" Height="490.8" Width="830" WindowStartupLocation="CenterScreen" VerticalAlignment="Center" UseLayoutRounding="True" TextOptions.TextHintingMode="Animated" WindowStyle="ThreeDBorderWindow" BorderThickness="2" FontFamily="Times New Roman" FontWeight="Medium" Icon="bus.png" ResizeMode="NoResize">
+    <Window.ContextMenu>
+        <ContextMenu FontSize="122"/>
+    </Window.ContextMenu>
 
     <Grid Margin="-3,0,-68.4,-46" Background="#FF00C000" Focusable="True" UseLayoutRounding="True" SnapsToDevicePixels="True">
         <Grid.ColumnDefinitions>
