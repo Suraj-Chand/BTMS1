@@ -9,8 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
-
+using System.IO;
 
 namespace BTMS1
 {
@@ -28,9 +27,190 @@ namespace BTMS1
             displaybusdetails();
             displayroutecreator();
             displayticket();
+            combb();
+            comb();
+            comb1();
+            tic();
+            emp();
+        }
 
+        public void tic()
+        {
+            try
+            {
+                con.Open();
+                SqlCommand ccm = new SqlCommand("select  busno from busdetails", con);
+
+                SqlDataReader dd = ccm.ExecuteReader();
+
+                busnocomboBox.Items.Clear();
+                while (dd.Read())
+                {
+
+                    busnocomboBox.Items.Add(dd.GetValue(0).ToString());
+
+
+                }
+                dd.Close();
+                con.Close();
+            }
+            catch (IOException)
+            {
+                busnocomboBox.Items.Clear();
+
+            }
+        }
+
+
+
+
+
+        public void comb()
+        {
+            try
+            {
+                con.Open();
+                SqlCommand ccm = new SqlCommand("select routeid from busoute", con);
+
+                SqlDataReader dd = ccm.ExecuteReader();
+
+                routeidtxtbox.Items.Clear();
+                while (dd.Read())
+                {
+
+                    routeidtxtbox.Items.Add(dd.GetValue(0).ToString());
+
+
+                }
+                dd.Close();
+                con.Close();
+            }
+            catch (IOException)
+            {
+                routeidtxtbox.Items.Clear();
+
+            }
+        }
+        public void combb()
+        {
+            try
+            {
+                con.Open();
+                SqlCommand ccm = new SqlCommand("select choosestation from busoute", con);
+
+                SqlDataReader dd = ccm.ExecuteReader();
+
+                crcomboBox.Items.Clear();
+                while (dd.Read())
+                {
+
+                    crcomboBox.Items.Add(dd.GetValue(0).ToString());
+
+
+                }
+                dd.Close();
+                con.Close();
+            }
+            catch (IOException)
+            {
+                crcomboBox.Items.Clear();
+
+            }
+        }
+
+        public void comb1()
+        {
+            con.Close();
+            try
+            {
+                con.Open();
+                SqlCommand ccm = new SqlCommand("select choosestation from busoute", con);
+
+                SqlDataReader dd = ccm.ExecuteReader();
+
+                chooseroutecomboBox.Items.Clear();
+                while (dd.Read())
+                {
+
+                    chooseroutecomboBox.Items.Add(dd.GetValue(0).ToString());
+
+
+                }
+                dd.Close();
+                con.Close();
+            }
+            catch (IOException)
+            {
+                chooseroutecomboBox.Items.Clear();
+
+            }
+        }
+        public void emp()
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select role from EmployeeTB";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            int i = int.Parse(dt.Rows.Count.ToString());
+            foreach (DataRow dr in dt.Rows)
+            {
+                string sd = dr["role"].ToString();
+
+
+
+
+                try
+                {
+
+                    SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-1LF5S1M;Initial Catalog=BTMS1;Integrated Security=True");
+
+                    conn.Open();
+                    SqlCommand ccm = new SqlCommand("select employeename from EmployeeTB", conn);
+
+                    SqlDataReader dd = ccm.ExecuteReader();
+
+                    drivercomboBox.Items.Clear();
+                    conductorcomboBox.Items.Clear();
+                    while (dd.Read())
+                    {
+
+
+                        drivercomboBox.Items.Add(dd.GetValue(0).ToString());
+
+
+
+                        conductorcomboBox.Items.Add(dd.GetValue(0).ToString());
+
+
+
+
+                    }
+                    dd.Close();
+                    conn.Close();
+                }
+                catch (IOException)
+                {
+                    drivercomboBox.Items.Clear();
+                    conductorcomboBox.Items.Clear();
+
+                }
+                con.Close();
+            }
 
         }
+
+
+
+
+
+
+
+
+
 
         public void displaystation()
         {
@@ -894,7 +1074,7 @@ namespace BTMS1
 
             cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update busoute set routeid='" + routeidtxtbox.Text + "',choosestation='" + choosestationcomboBox.Text + "',distancefromsource='" + distancefromsourcetxtbox.Text + "', arrivaltime='" + arrivaltimetxtbox.Text + "',departuretime='" + departuretimetxtbox.Text + "' where routeid='" + routeidtxtbox.Text + "'";
+            cmd.CommandText = "update busoute set routeid='" + enterrouteidtxtbox.Text + "',choosestation='" + choosestationcomboBox.Text + "',distancefromsource='" + distancefromsourcetxtbox.Text + "', arrivaltime='" + arrivaltimetxtbox.Text + "',departuretime='" + departuretimetxtbox.Text + "' where routeid='" + enterrouteidtxtbox.Text + "'";
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Record updated Sucessfully");
@@ -907,7 +1087,7 @@ namespace BTMS1
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = " delete from busoute where routeid='" + routeidtxtbox.Text + "'";
+            cmd.CommandText = " delete from busoute where routeid='" + enterrouteidtxtbox.Text + "'";
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Record deleted Sucessfully");
@@ -940,6 +1120,47 @@ namespace BTMS1
             {
                 MessageBox.Show("Enter proper record");
             }
+        }
+
+        private void routeidtxtbox_Click(object sender, EventArgs e)
+        {
+            comb();
+        }
+
+        private void chooseroutecomboBox_ChangeUICues(object sender, UICuesEventArgs e)
+        {
+
+        }
+
+        private void chooseroutecomboBox_Click(object sender, EventArgs e)
+        {
+            comb1();
+            emp();
+        }
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+            tic();
+            combb();
+        }
+
+        private void enterticketnotxtbox_TextChanged(object sender, EventArgs e)
+        {
+            if (con.State == ConnectionState.Closed)
+                con.Open();
+            cmd = new SqlCommand("select * from ticketcreator where ticketno like ('%" + enterticketnotxtbox.Text + "%')", con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            searchticketdgv.Rows.Clear();
+            int i = 0;
+            while (dr.Read())
+            {
+                i = i + 1;
+                searchticketdgv.Rows.Add(i.ToString(), dr["ticketno"].ToString(), dr["busno"].ToString(), dr["sourcestation"].ToString(), dr["destinationstation"].ToString(), dr["distancefromsource"].ToString(), dr["totalfarecost"].ToString(), dr["issueddate"].ToString(), dr["departuredate"].ToString(), dr["departuretime"].ToString(), dr["arrivaltime"].ToString(), dr["name"].ToString(), dr["age"].ToString(), dr["gender"].ToString(), dr["address"].ToString(), dr["phoneno"].ToString());
+
+            }
+            dr.Close();
+            con.Close();
+
         }
     }
 } 

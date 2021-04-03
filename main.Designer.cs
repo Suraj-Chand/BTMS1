@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.routeidtxtbox = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.addstationdgv = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +43,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.addstationbtn = new System.Windows.Forms.Button();
             this.stationnametxtbox = new System.Windows.Forms.TextBox();
-            this.routeidtxtbox = new System.Windows.Forms.TextBox();
             this.stationaddresstxtbox = new System.Windows.Forms.TextBox();
             this.stationcodetxtbox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -107,11 +107,11 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.choosestationcomboBox = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.distancefromsourcetxtbox = new System.Windows.Forms.TextBox();
             this.departuretimetxtbox = new System.Windows.Forms.TextBox();
             this.arrivaltimetxtbox = new System.Windows.Forms.TextBox();
+            this.choosestationcomboBox = new System.Windows.Forms.TextBox();
             this.enterrouteidtxtbox = new System.Windows.Forms.TextBox();
             this.brcdgv = new System.Windows.Forms.DataGridView();
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -171,7 +171,6 @@
             this.Column38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.printticketbtn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.searchticketbtn = new System.Windows.Forms.Button();
             this.enterticketnotxtbox = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -183,9 +182,7 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
-            this.destinationstationcombobox = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.sourcestationcomboBox = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -206,6 +203,10 @@
             this.stationsTableAdapter = new BTMS1.BTMS1DataSet5TableAdapters.stationsTableAdapter();
             this.bus_DetailsTableAdapter = new BTMS1.BTMS1DataSet6TableAdapters.Bus_DetailsTableAdapter();
             this.bus_RouteTableAdapter = new BTMS1.BTMS1DataSet7TableAdapters.Bus_RouteTableAdapter();
+            this.sourcestationcomboBox = new System.Windows.Forms.TextBox();
+            this.destinationstationcombobox = new System.Windows.Forms.TextBox();
+            this.crcomboBox = new System.Windows.Forms.ComboBox();
+            this.label42 = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addstationdgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stationsBindingSource)).BeginInit();
@@ -241,13 +242,13 @@
             this.tabPage4.AllowDrop = true;
             this.tabPage4.BackColor = System.Drawing.Color.Aqua;
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage4.Controls.Add(this.routeidtxtbox);
             this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Controls.Add(this.addstationdgv);
             this.tabPage4.Controls.Add(this.button7);
             this.tabPage4.Controls.Add(this.button6);
             this.tabPage4.Controls.Add(this.addstationbtn);
             this.tabPage4.Controls.Add(this.stationnametxtbox);
-            this.tabPage4.Controls.Add(this.routeidtxtbox);
             this.tabPage4.Controls.Add(this.stationaddresstxtbox);
             this.tabPage4.Controls.Add(this.stationcodetxtbox);
             this.tabPage4.Controls.Add(this.label15);
@@ -261,6 +262,15 @@
             this.tabPage4.Size = new System.Drawing.Size(1666, 883);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Stations";
+            // 
+            // routeidtxtbox
+            // 
+            this.routeidtxtbox.FormattingEnabled = true;
+            this.routeidtxtbox.Location = new System.Drawing.Point(772, 135);
+            this.routeidtxtbox.Name = "routeidtxtbox";
+            this.routeidtxtbox.Size = new System.Drawing.Size(173, 27);
+            this.routeidtxtbox.TabIndex = 12;
+            this.routeidtxtbox.Click += new System.EventHandler(this.routeidtxtbox_Click);
             // 
             // button3
             // 
@@ -379,17 +389,6 @@
             this.stationnametxtbox.Name = "stationnametxtbox";
             this.stationnametxtbox.Size = new System.Drawing.Size(178, 25);
             this.stationnametxtbox.TabIndex = 1;
-            // 
-            // routeidtxtbox
-            // 
-            this.routeidtxtbox.AllowDrop = true;
-            this.routeidtxtbox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.routeidtxtbox.Location = new System.Drawing.Point(746, 132);
-            this.routeidtxtbox.Margin = new System.Windows.Forms.Padding(2);
-            this.routeidtxtbox.Multiline = true;
-            this.routeidtxtbox.Name = "routeidtxtbox";
-            this.routeidtxtbox.Size = new System.Drawing.Size(178, 25);
-            this.routeidtxtbox.TabIndex = 3;
             // 
             // stationaddresstxtbox
             // 
@@ -534,8 +533,8 @@
             // addemployeedgv
             // 
             this.addemployeedgv.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.addemployeedgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.addemployeedgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.addemployeedgv.BackgroundColor = System.Drawing.Color.Azure;
             this.addemployeedgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.addemployeedgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1001,11 +1000,11 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.choosestationcomboBox);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.distancefromsourcetxtbox);
             this.groupBox1.Controls.Add(this.departuretimetxtbox);
             this.groupBox1.Controls.Add(this.arrivaltimetxtbox);
+            this.groupBox1.Controls.Add(this.choosestationcomboBox);
             this.groupBox1.Controls.Add(this.enterrouteidtxtbox);
             this.groupBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
@@ -1125,29 +1124,10 @@
             this.label10.Location = new System.Drawing.Point(14, 72);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 19);
+            this.label10.Size = new System.Drawing.Size(95, 19);
             this.label10.TabIndex = 6;
-            this.label10.Text = "Choose Station:-";
+            this.label10.Text = "Route Name:-";
             this.label10.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // choosestationcomboBox
-            // 
-            this.choosestationcomboBox.AllowDrop = true;
-            this.choosestationcomboBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.choosestationcomboBox.FormattingEnabled = true;
-            this.choosestationcomboBox.Items.AddRange(new object[] {
-            "Dhangadhi ",
-            "Mahendranagar",
-            "Dadeldhura",
-            "Baitadi",
-            "Tikapur",
-            "Nepaljung",
-            "Birjung"});
-            this.choosestationcomboBox.Location = new System.Drawing.Point(129, 72);
-            this.choosestationcomboBox.Margin = new System.Windows.Forms.Padding(2);
-            this.choosestationcomboBox.Name = "choosestationcomboBox";
-            this.choosestationcomboBox.Size = new System.Drawing.Size(292, 28);
-            this.choosestationcomboBox.TabIndex = 1;
             // 
             // label9
             // 
@@ -1200,6 +1180,18 @@
             this.arrivaltimetxtbox.Size = new System.Drawing.Size(293, 25);
             this.arrivaltimetxtbox.TabIndex = 3;
             this.arrivaltimetxtbox.TextChanged += new System.EventHandler(this.txtBus_TextChanged);
+            // 
+            // choosestationcomboBox
+            // 
+            this.choosestationcomboBox.AllowDrop = true;
+            this.choosestationcomboBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.choosestationcomboBox.Location = new System.Drawing.Point(129, 72);
+            this.choosestationcomboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.choosestationcomboBox.Multiline = true;
+            this.choosestationcomboBox.Name = "choosestationcomboBox";
+            this.choosestationcomboBox.Size = new System.Drawing.Size(293, 25);
+            this.choosestationcomboBox.TabIndex = 0;
+            this.choosestationcomboBox.TextChanged += new System.EventHandler(this.txtBus_TextChanged);
             // 
             // enterrouteidtxtbox
             // 
@@ -1299,6 +1291,8 @@
             this.chooseroutecomboBox.Name = "chooseroutecomboBox";
             this.chooseroutecomboBox.Size = new System.Drawing.Size(178, 27);
             this.chooseroutecomboBox.TabIndex = 2;
+            this.chooseroutecomboBox.Click += new System.EventHandler(this.chooseroutecomboBox_Click);
+            this.chooseroutecomboBox.ChangeUICues += new System.Windows.Forms.UICuesEventHandler(this.chooseroutecomboBox_ChangeUICues);
             // 
             // conductorcomboBox
             // 
@@ -1812,44 +1806,29 @@
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Aqua;
             this.groupBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox4.Controls.Add(this.searchticketbtn);
             this.groupBox4.Controls.Add(this.enterticketnotxtbox);
             this.groupBox4.Controls.Add(this.label25);
             this.groupBox4.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.Black;
-            this.groupBox4.Location = new System.Drawing.Point(5, 327);
+            this.groupBox4.Location = new System.Drawing.Point(5, 361);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(670, 114);
+            this.groupBox4.Size = new System.Drawing.Size(670, 80);
             this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search Ticket";
             this.groupBox4.UseCompatibleTextRendering = true;
             // 
-            // searchticketbtn
-            // 
-            this.searchticketbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.searchticketbtn.Cursor = System.Windows.Forms.Cursors.Default;
-            this.searchticketbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.searchticketbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchticketbtn.Location = new System.Drawing.Point(331, 51);
-            this.searchticketbtn.Margin = new System.Windows.Forms.Padding(2);
-            this.searchticketbtn.Name = "searchticketbtn";
-            this.searchticketbtn.Size = new System.Drawing.Size(115, 25);
-            this.searchticketbtn.TabIndex = 1;
-            this.searchticketbtn.Text = "Search Ticket";
-            this.searchticketbtn.UseVisualStyleBackColor = false;
-            this.searchticketbtn.Click += new System.EventHandler(this.searchticketbtn_Click);
-            // 
             // enterticketnotxtbox
             // 
-            this.enterticketnotxtbox.Location = new System.Drawing.Point(122, 49);
+            this.enterticketnotxtbox.Location = new System.Drawing.Point(210, 38);
             this.enterticketnotxtbox.Margin = new System.Windows.Forms.Padding(2);
             this.enterticketnotxtbox.Name = "enterticketnotxtbox";
             this.enterticketnotxtbox.Size = new System.Drawing.Size(192, 29);
             this.enterticketnotxtbox.TabIndex = 0;
+            this.enterticketnotxtbox.TextChanged += new System.EventHandler(this.enterticketnotxtbox_TextChanged);
             // 
             // label25
             // 
@@ -1859,7 +1838,7 @@
             this.label25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Black;
             this.label25.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label25.Location = new System.Drawing.Point(7, 54);
+            this.label25.Location = new System.Drawing.Point(95, 43);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(115, 19);
@@ -1871,6 +1850,8 @@
             this.groupBox2.BackColor = System.Drawing.Color.Aqua;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox2.Controls.Add(this.label39);
+            this.groupBox2.Controls.Add(this.sourcestationcomboBox);
+            this.groupBox2.Controls.Add(this.destinationstationcombobox);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.dateTimePicker3);
             this.groupBox2.Controls.Add(this.label35);
@@ -1878,15 +1859,15 @@
             this.groupBox2.Controls.Add(this.dateTimePicker2);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.label28);
-            this.groupBox2.Controls.Add(this.destinationstationcombobox);
             this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.sourcestationcomboBox);
+            this.groupBox2.Controls.Add(this.label42);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.label36);
             this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.ticketnotxtbox);
             this.groupBox2.Controls.Add(this.label34);
             this.groupBox2.Controls.Add(this.label38);
+            this.groupBox2.Controls.Add(this.crcomboBox);
             this.groupBox2.Controls.Add(this.busnocomboBox);
             this.groupBox2.Controls.Add(this.label31);
             this.groupBox2.Controls.Add(this.totalfarecosttxtbox);
@@ -1898,7 +1879,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(671, 295);
+            this.groupBox2.Size = new System.Drawing.Size(671, 329);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Create Ticket";
@@ -1923,11 +1904,11 @@
             // 
             this.textBox1.AllowDrop = true;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox1.Location = new System.Drawing.Point(169, 233);
+            this.textBox1.Location = new System.Drawing.Point(169, 237);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 26);
+            this.textBox1.Size = new System.Drawing.Size(139, 26);
             this.textBox1.TabIndex = 4;
             // 
             // dateTimePicker3
@@ -1994,25 +1975,6 @@
             this.label28.TabIndex = 23;
             this.label28.Text = "Destination Station:-";
             // 
-            // destinationstationcombobox
-            // 
-            this.destinationstationcombobox.AllowDrop = true;
-            this.destinationstationcombobox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.destinationstationcombobox.FormattingEnabled = true;
-            this.destinationstationcombobox.Items.AddRange(new object[] {
-            "Dhangadhi ",
-            "Mahendranagar",
-            "Dadeldhura",
-            "Baitadi",
-            "Tikapur",
-            "Nepaljung",
-            "Birjung"});
-            this.destinationstationcombobox.Location = new System.Drawing.Point(150, 188);
-            this.destinationstationcombobox.Margin = new System.Windows.Forms.Padding(2);
-            this.destinationstationcombobox.Name = "destinationstationcombobox";
-            this.destinationstationcombobox.Size = new System.Drawing.Size(159, 28);
-            this.destinationstationcombobox.TabIndex = 3;
-            // 
             // label21
             // 
             this.label21.AllowDrop = true;
@@ -2027,25 +1989,6 @@
             this.label21.Size = new System.Drawing.Size(107, 19);
             this.label21.TabIndex = 24;
             this.label21.Text = "Source Station:-";
-            // 
-            // sourcestationcomboBox
-            // 
-            this.sourcestationcomboBox.AllowDrop = true;
-            this.sourcestationcomboBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.sourcestationcomboBox.FormattingEnabled = true;
-            this.sourcestationcomboBox.Items.AddRange(new object[] {
-            "Dhangadhi ",
-            "Mahendranagar",
-            "Dadeldhura",
-            "Baitadi",
-            "Tikapur",
-            "Nepaljung",
-            "Birjung"});
-            this.sourcestationcomboBox.Location = new System.Drawing.Point(121, 137);
-            this.sourcestationcomboBox.Margin = new System.Windows.Forms.Padding(2);
-            this.sourcestationcomboBox.Name = "sourcestationcomboBox";
-            this.sourcestationcomboBox.Size = new System.Drawing.Size(188, 28);
-            this.sourcestationcomboBox.TabIndex = 2;
             // 
             // label18
             // 
@@ -2213,6 +2156,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1674, 915);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // bTMS1DataSet
             // 
@@ -2243,6 +2187,62 @@
             // bus_RouteTableAdapter
             // 
             this.bus_RouteTableAdapter.ClearBeforeFill = true;
+            // 
+            // sourcestationcomboBox
+            // 
+            this.sourcestationcomboBox.AllowDrop = true;
+            this.sourcestationcomboBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.sourcestationcomboBox.Location = new System.Drawing.Point(123, 137);
+            this.sourcestationcomboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.sourcestationcomboBox.Multiline = true;
+            this.sourcestationcomboBox.Name = "sourcestationcomboBox";
+            this.sourcestationcomboBox.Size = new System.Drawing.Size(183, 26);
+            this.sourcestationcomboBox.TabIndex = 4;
+            // 
+            // destinationstationcombobox
+            // 
+            this.destinationstationcombobox.AllowDrop = true;
+            this.destinationstationcombobox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.destinationstationcombobox.Location = new System.Drawing.Point(140, 189);
+            this.destinationstationcombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.destinationstationcombobox.Multiline = true;
+            this.destinationstationcombobox.Name = "destinationstationcombobox";
+            this.destinationstationcombobox.Size = new System.Drawing.Size(166, 26);
+            this.destinationstationcombobox.TabIndex = 4;
+            // 
+            // crcomboBox
+            // 
+            this.crcomboBox.AllowDrop = true;
+            this.crcomboBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crcomboBox.FormattingEnabled = true;
+            this.crcomboBox.Items.AddRange(new object[] {
+            "Dhangadhi ",
+            "Mahendranagar",
+            "Dadeldhura",
+            "Baitadi",
+            "Tikapur",
+            "Nepaljung",
+            "Birjung"});
+            this.crcomboBox.Location = new System.Drawing.Point(118, 283);
+            this.crcomboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.crcomboBox.Name = "crcomboBox";
+            this.crcomboBox.Size = new System.Drawing.Size(188, 28);
+            this.crcomboBox.TabIndex = 1;
+            // 
+            // label42
+            // 
+            this.label42.AllowDrop = true;
+            this.label42.AutoSize = true;
+            this.label42.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label42.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Black;
+            this.label42.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label42.Location = new System.Drawing.Point(6, 288);
+            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(105, 19);
+            this.label42.TabIndex = 14;
+            this.label42.Text = "Choose Route:-";
             // 
             // main
             // 
@@ -2326,7 +2326,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox choosestationcomboBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox distancefromsourcetxtbox;
         private System.Windows.Forms.TextBox departuretimetxtbox;
@@ -2351,7 +2350,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView searchticketdgv;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button searchticketbtn;
         private System.Windows.Forms.TextBox enterticketnotxtbox;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label23;
@@ -2385,9 +2383,7 @@
         private System.Windows.Forms.BindingSource busRouteBindingSource;
         private BTMS1DataSet7TableAdapters.Bus_RouteTableAdapter bus_RouteTableAdapter;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.ComboBox destinationstationcombobox;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ComboBox sourcestationcomboBox;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -2439,7 +2435,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button addstationbtn;
         private System.Windows.Forms.TextBox stationnametxtbox;
-        private System.Windows.Forms.TextBox routeidtxtbox;
         private System.Windows.Forms.TextBox stationaddresstxtbox;
         private System.Windows.Forms.TextBox stationcodetxtbox;
         private System.Windows.Forms.Label label15;
@@ -2475,5 +2470,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column42;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column43;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column44;
+        private System.Windows.Forms.ComboBox routeidtxtbox;
+        private System.Windows.Forms.TextBox choosestationcomboBox;
+        private System.Windows.Forms.TextBox sourcestationcomboBox;
+        private System.Windows.Forms.TextBox destinationstationcombobox;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.ComboBox crcomboBox;
     }
 }
