@@ -56,52 +56,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BTMS1DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BTMS1DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BTMS1DataSet11.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BTMS1DataSet11.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BTMS1DataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BTMS1DataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BTMS1DataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BTMS1DataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BTMS1DataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BTMS1DataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BTMS1DataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BTMS1DataSet5.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BTMS1DataSet6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BTMS1DataSet6.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BTMS1DataSet7.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BTMS1DataSet7.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Print Ticket.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Print Ticket.Designer.cs">
-      <DependentUpon>Print Ticket.cs</DependentUpon>
-    </Compile>
     <Compile Include="newPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,9 +110,6 @@
     <EmbeddedResource Include="newPassword.resx">
       <DependentUpon>newPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Print Ticket.resx">
-      <DependentUpon>Print Ticket.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -166,94 +117,6 @@
     <EmbeddedResource Include="sendCode.resx">
       <DependentUpon>sendCode.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="BTMS1DataSet1.xsc">
-      <DependentUpon>BTMS1DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BTMS1DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BTMS1DataSet1.xss">
-      <DependentUpon>BTMS1DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet11.xsc">
-      <DependentUpon>BTMS1DataSet11.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet11.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BTMS1DataSet11.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BTMS1DataSet11.xss">
-      <DependentUpon>BTMS1DataSet11.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet2.xsc">
-      <DependentUpon>BTMS1DataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BTMS1DataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BTMS1DataSet2.xss">
-      <DependentUpon>BTMS1DataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet3.xsc">
-      <DependentUpon>BTMS1DataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BTMS1DataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BTMS1DataSet3.xss">
-      <DependentUpon>BTMS1DataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet4.xsc">
-      <DependentUpon>BTMS1DataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BTMS1DataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BTMS1DataSet4.xss">
-      <DependentUpon>BTMS1DataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet5.xsc">
-      <DependentUpon>BTMS1DataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BTMS1DataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BTMS1DataSet5.xss">
-      <DependentUpon>BTMS1DataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet6.xsc">
-      <DependentUpon>BTMS1DataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet6.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BTMS1DataSet6.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BTMS1DataSet6.xss">
-      <DependentUpon>BTMS1DataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet7.xsc">
-      <DependentUpon>BTMS1DataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="BTMS1DataSet7.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BTMS1DataSet7.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BTMS1DataSet7.xss">
-      <DependentUpon>BTMS1DataSet7.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
